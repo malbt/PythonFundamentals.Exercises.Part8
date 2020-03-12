@@ -17,9 +17,12 @@ def reckless_file_reader(file_path: str) -> None:
 # This anti-pattern will hide bugs in your code and cause endless headache.
 def quick_way_to_get_fired(file_path: str) -> None:
     try:
-        reckless_file_reader(file_path)
+        zrong = open(reckless_file_reader(file_path))
     except:
-        pass
+        print("you don't have permission to open this file.")
+
+
+file_path = "locked_out_file.txt"
 
 
 # Once we know our code has the potential to raise exceptions, we can handle the exception properly like the code below.
